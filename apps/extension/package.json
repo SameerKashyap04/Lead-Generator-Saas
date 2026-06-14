@@ -1,0 +1,40 @@
+{
+  "name": "@leadscaper/extension",
+  "version": "1.0.0",
+  "description": "LeadScaper Pro Chrome Extension — Extract business leads from Google Maps",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.108.1",
+    "clsx": "^2.1.1",
+    "dexie": "^4.0.9",
+    "dexie-react-hooks": "^1.1.7",
+    "framer-motion": "^11.12.0",
+    "lucide-react": "^0.460.0",
+    "papaparse": "^5.5.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "recharts": "^2.13.3",
+    "tailwind-merge": "^2.6.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.280",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}

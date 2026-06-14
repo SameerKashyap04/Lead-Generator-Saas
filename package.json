@@ -1,0 +1,22 @@
+{
+  "name": "leadscaper-pro-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "dev:ext": "npm run dev --workspace=apps/extension",
+    "build": "npm run build --workspace=apps/web",
+    "build:ext": "npm run build --workspace=apps/extension",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "devDependencies": {
+    "turbo": "^2.9.18"
+  }
+}

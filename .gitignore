@@ -1,0 +1,15 @@
+node_modules
+.next
+.vscode
+dist
+.DS_Store
+.env
+.env.local
+.env.development
+.env.production
+.turbo
+apps/web/.next
+apps/extension/dist
+apps/web/node_modules
+apps/extension/node_modules
+*.log
