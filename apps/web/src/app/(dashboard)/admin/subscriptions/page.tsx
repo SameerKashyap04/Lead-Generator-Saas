@@ -85,7 +85,7 @@ export default function AdminSubscriptionsPage() {
                 <th className="px-6 py-4 font-semibold" style={{ color: "var(--text-secondary)" }}>Renews/Ends On</th>
               </tr>
             </thead>
-            <tbody className="divide-y" style={{ divideColor: "var(--border-primary)" }}>
+            <tbody className="divide-y divide-[var(--border-primary)]">
               {loading ? (
                 <tr>
                   <td colSpan={5} className="px-6 py-8 text-center">
