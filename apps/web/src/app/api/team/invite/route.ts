@@ -2,16 +2,12 @@ import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import crypto from "crypto";
 
-// We need a Service Role client to bypass RLS or insert into invites if needed,
-// but actually, we can just use RLS if it's configured. Let's use service role to be safe 
-// since we don't have the cookie-based SSR client configured identically everywhere.
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
-
 export async function POST(req: Request) {
   try {
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL || '',
+      process.env.SUPABASE_SERVICE_ROLE_KEY || ''
+    );
     const { email, role, workspaceId } = await req.json();
 
     if (!email || !role || !workspaceId) {
